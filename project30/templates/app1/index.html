@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>User Registeration</title>
+    </head>
+    <body>
+        <form action="{% url 'reg' %}" method="POST">
+        {% csrf_token %}
+            <table>
+                <tr>
+                    <td>Name</td>
+                    <td><input type='text' name='name'></td>
+                </tr>
+                <tr>
+                    <td>Username</td>
+                    <td><input type='text' name='user'></td>
+                </tr>
+                <tr>
+                    <td>Password</td>
+                    <td><input type='password' name='pwd'></td>
+                </tr>
+                <tr>
+                    <td><input type='Submit' value='Register'></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

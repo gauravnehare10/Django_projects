@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Student Form</title>
+        <link href="https://cdn.jsdelivr.net/npn/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+        <script src="https://cdn.jsdelivr.net/npn/bootstrap@5.0.2/dist/js/bootstrap.min.js">
+    </head>
+    <body>
+        <div class='container'>
+            <form action="{% url 'student' %}" request="POST">
+                {{form}}
+                <input type="submit" class="btn btn-primary">
+            </form>
+        </div>
+    </body>
+</html>

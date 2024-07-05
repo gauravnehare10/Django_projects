@@ -1,0 +1,5 @@
+{% extends "app1/base.html" %}
+{% block title %}<title>Child Template 2 </title>{% endblock %}
+{% block content%}<h2>This is Child Template 2</h1>
+{{block.super}}
+{% endblock%}

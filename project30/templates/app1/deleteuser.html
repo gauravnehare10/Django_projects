@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Delete User</title>
+    </head>
+    <body>
+        <form action="{% url 'delete' %}" method="POST">
+            {% csrf_token %}
+            <table>
+                <tr>
+                    <td>Username</td>
+                    <td><input type="text" name="user"></td>
+                </tr>
+                <tr>
+                    <td><input type="submit" value="delete"></td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>

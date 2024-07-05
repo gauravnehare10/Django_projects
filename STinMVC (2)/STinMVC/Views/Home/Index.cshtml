@@ -1,0 +1,63 @@
+﻿@model IEnumerable<STinMVC.Models.Employee>
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <h2>Item Page</h2>
+  
+   
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemID) &nbsp;&nbsp;&nbsp;
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ItemDescr)&nbsp;&nbsp;&nbsp;
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BalQty)&nbsp;&nbsp;&nbsp;
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ItemDescr)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BalQty)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit Item", "Edit", new { id = item.ItemID  }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ItemID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ItemID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    <br />
+    <br />
+    @Html.ActionLink("Transaction Page", "Index", "Student")
+
+    @*<a href="/Student/Index">Student</a>*@
+</body>
+</html>
+
+
+@*"Transaction Page",*@

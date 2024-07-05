@@ -1,0 +1,19 @@
+<html>
+    <head></head>
+    <body>
+        <h1>Grade</h1>
+        <h2>
+            Name : {{name}}<br>
+            Marks : {{marks}}<br>
+            {%if marks >= 90%}
+            Grade A
+            {%elif marks >= 70 and marks < 90%}
+            Grade B
+            {%elif marks >= 50 and marks < 70%}
+            Grade C
+            {%else%}
+            Grade D
+            {% endif %}
+        </h2>
+    </body>
+</html>

@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <form method = "GET" action="{% url 'calculator' %}">
+            <h1>
+                Number1 <input type="text" name="t1"><br>
+                Number2 <input type="text" name="t2"><br>
+                Operator <input type="text" name="opr"><br>
+                <input type="submit"><br>
+            </h1>
+        </form>
+    </body>
+</html>

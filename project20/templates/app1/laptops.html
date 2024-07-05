@@ -1,0 +1,15 @@
+{% extends "app1/index.html" %}
+{% block content %}
+<table>
+    <tr>
+        <th>Laptop</th>
+        <th>Price</th>
+    </tr>
+    {% for name, price in laptops_data.items %}
+    <tr>
+        <td>{{name}}</td>
+        <td>{{price}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
