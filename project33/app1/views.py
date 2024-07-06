@@ -11,11 +11,13 @@ def student_view(request):
     
     elif request.method == "POST":
         form = forms.StudentForm(request.POST)
-        form.is_valid()
-        string = f'''<h2>
-        Roll No.: {form.cleaned_data.get('rollno')}<br>
-        Name: {form.cleaned_data.get('sname')} <br>
-        Course: {form.cleaned_data.get('course')}<br>
-        Fees: {form.cleaned_data.get('fees')}<br>
-        Remark: {form.cleaned_data.get('remark')}</h2>'''
-        return HttpResponse(string)
+        if form.is_valid():
+            string = f'''<h2>
+            Roll No.: {form.cleaned_data.get('rollno')}<br>
+            Name: {form.cleaned_data.get('sname')} <br>
+            Course: {form.cleaned_data.get('course')}<br>
+            Fees: {form.cleaned_data.get('fees')}<br>
+            Remark: {form.cleaned_data.get('remark')}</h2>'''
+            return HttpResponse(string)
+        else:
+            return render(request, 'app1/student.html', context={'form': form})
