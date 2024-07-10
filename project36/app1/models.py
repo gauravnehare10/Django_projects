@@ -8,4 +8,5 @@ class Employee(models.Model):
     job = models.CharField(max_length=15)
     salary = models.FloatField()
 
-    
+    def __str__(self):
+        return f"{self.empno}, {self.ename}, {self.job}, {self.salary}"

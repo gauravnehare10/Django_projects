@@ -1,0 +1,9 @@
+<html>
+    <body>
+        <form>
+            {% for e in emp %}
+            {{e}}<a href="{% url 'edit' e.empno %}">Edit</a><br>
+            {% endfor %}
+        </form>
+    </body>
+</html>

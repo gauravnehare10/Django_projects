@@ -16,8 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app1.views import view_empform
+from app1.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('emp/', view_empform)
+    #path('emp/', view_empform),
+    #path('input/', input_view, name='input'),
+    #path('delete/', delete_view, name = 'delete'),
+    path('list/', list_emp, name = 'list'),
+    path('edit/<empno>', edit_view, name = 'edit')
 ]
