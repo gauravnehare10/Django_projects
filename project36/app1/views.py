@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from app1.forms import EmployeeForm
 from app1.models import Employee
 from django.http import HttpResponseRedirect
@@ -44,10 +44,12 @@ def list_emp(request):
 def edit_view(request, empno):
     if request.method == "GET":
         emp = Employee.objects.get(empno = empno)
-        form = EmployeeForm(instance= emp)
+        form = EmployeeForm(instance = emp)
         return render(request, 'app1/employee.html', context={'form': form})
     
     elif request.method == "POST":
-        emp = EmployeeForm(request.POST)
-        emp.save(commit = True)
-        return HttpResponseRedirect('list')
+        emp = Employee.objects.get(empno = empno)
+        e = EmployeeForm(request.POST, instance = emp)
+        if e.is_valid():
+            e.save(commit = True)
+        return redirect('list')
