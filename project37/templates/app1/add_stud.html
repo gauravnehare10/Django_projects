@@ -1,0 +1,12 @@
+{% extends "app1/base.html" %}
+{% block content %}
+<form method = "POST">
+    {% csrf_token %}
+    <table class="table table-success table-striped">
+        {{form.as_table}}
+    </table>
+    <input class="btn btn-primary" type="submit" value="Submit">
+
+</form>
+{{message}}
+{% endblock %}
