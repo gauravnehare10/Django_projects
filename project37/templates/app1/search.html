@@ -26,6 +26,14 @@
         <td>{{stud.subject2}}</td>
         <td>{{stud.subject3}}</td>
     </tr>
+    {% for student in obj %}
+    <tr>
+        <td>{{student.rollno}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.subject1}}</td>
+        <td>{{student.subject2}}</td>
+        <td>{{student.subject3}}</td>
+    {% endfor %}
 </table>
 <h2>{{msg}}</h2>
 {% endblock %}

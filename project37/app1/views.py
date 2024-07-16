@@ -35,12 +35,13 @@ def edit_view(request, id):
         form = MarksForm(request.POST, instance=stud)
         if form.is_valid():
             form.save(commit=True)
-            return redirect('update')    ##########
+            return redirect('update')
         else:
             return render(request,'app1/update_stud.html', context={'form':form})
 
 def search_view(request):
-    return render(request, 'app1/search.html')
+    obj = Marks.objects.all()
+    return render(request, 'app1/search.html', context={'obj': obj})
 
 def find_view(request):
     rollno = request.GET.get('rollno')
@@ -51,3 +52,15 @@ def find_view(request):
         msg = "Invalid Roll No"
         return render(request, 'app1/search.html', context={'msg': msg})
     
+def find_result(request):
+    marks_qset = Marks.objects.all()
+    marks_list = []
+    for stud in marks_qset:
+        row = [stud.rollno, stud.name, stud.subject1, stud.subject2, stud.subject3]
+        row.append(stud.subject1 + stud.subject2 + stud.subject3)
+        rs = 'PASS' if stud.subject1>=40 and stud.subject2 >= 40 and stud.subject3 >= 40 else 'FAIL'
+        row.append(rs)
+        marks_list.append(row)
+    
+    return render(request, 'app1/result.html', context={'marks_list': marks_list})
+

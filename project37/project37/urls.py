@@ -25,5 +25,6 @@ urlpatterns = [
     path('update/', list_marks, name='update'),
     path('edit/<id>', edit_view, name='edit'),
     path('search/', search_view, name='search'),
-    path('/find', find_view, name='find')
+    path('find/', find_view, name='find'),
+    path('find_result/', find_result, name='find_result'),
 ]

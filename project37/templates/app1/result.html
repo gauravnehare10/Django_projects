@@ -1,0 +1,25 @@
+{% extends "app1/base.html" %}
+{% block content %}
+
+<table class="table table-success table-striped">
+    <tr>
+        <th>Roll No</th>
+        <th>Name</th>
+        <th>Subject1</th>
+        <th>Subject2</th>
+        <th>Subject3</th>
+        <th>Total</th>
+        <th>Result</th>
+    </tr>
+    {% for stud in marks_list %}
+    <tr>    
+    {% for value in stud %}
+        
+        <td>{{value}}</td>
+        
+    {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
