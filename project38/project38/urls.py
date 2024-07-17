@@ -20,6 +20,10 @@ from app1.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('greet/', GreetView.as_view()),
-    path('details/', DetailsView.as_view()),
-    path('display/<msg>/', TemplateView.as_view())
+    #path('details/', DetailsView.as_view()),
+    path('display/<msg>/', DisplayTemplateView.as_view()),
+    path('markslistview/', MarksView.as_view()),
+    path('cmarkslistview/', CMarksView.as_view()),
+    path('fmarksview/', FMarksView.as_view()),
+    path('dmarks/<int:pk>', DMarksView.as_view())
 ]
