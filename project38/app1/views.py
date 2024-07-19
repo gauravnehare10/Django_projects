@@ -2,8 +2,7 @@ from typing import Any
 from django.db.models.query import QuerySet
 from django.shortcuts import render
 from django.views import View
-from django.views.generic import TemplateView, ListView
-from django.views.generic.detail import DetailView
+from django.views.generic import TemplateView, ListView, DetailView
 from django.http import HttpResponse
 from app1.models import Marks
 # Create your views here.

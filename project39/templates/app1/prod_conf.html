@@ -1,0 +1,16 @@
+{% extends "app1/index.html" %}
+{% block content %}
+<form action="" method='POST'>
+    {% csrf_token %}
+    <table class="table table-dark table-striped">
+        <tr>
+            <td>{{product.prodid}}</td>
+            <td>{{product.prodname}}</td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Confirm" class="btn btn-danger"></td>
+            <td><a href="{% url "dlist" %}" class='btn btn-info'>Cancel</a></td>
+        </tr>
+    </table>
+</form>
+{% endblock %}

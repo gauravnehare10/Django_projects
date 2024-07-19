@@ -1,5 +1,5 @@
 """
-URL configuration for project38 project.
+URL configuration for project39 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -19,11 +19,11 @@ from django.urls import path
 from app1.views import *
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('greet/', GreetView.as_view()),
-    #path('details/', DetailsView.as_view()),
-    path('display/<msg>/', DisplayTemplateView.as_view()),
-    path('markslist/', MarksView.as_view()),
-    path('cmarkslist/', CMarksView.as_view()),
-    path('fmarks/', FMarksView.as_view()),
-    path('dmarks/<int:pk>', DMarksView.as_view())
+    path('create/', ProductCreateView.as_view(), name = 'create'),
+    path('home/', IndexView.as_view(), name = 'home'),
+    path('update/<pk>/', ProductUpdateView.as_view(), name = 'update'),
+    path('ulist/', ProductUListView.as_view(), name = 'ulist'),
+    path('dlist/', ProductDeleteListView.as_view(), name = 'dlist'),
+    path('delete/<pk>', ProductDeleteView.as_view(), name = 'delete'),
+    path('plist/', ProductListView.as_view(), name = 'plist')
 ]

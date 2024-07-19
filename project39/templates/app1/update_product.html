@@ -1,0 +1,10 @@
+{% extends "app1/index.html" %}
+{% block content %}
+<form action="" method="POST">
+    {% csrf_token %}
+    <table class="table table-dark table-striped">
+        {{form.as_table}}
+    </table>
+    <input type="submit" value="Update" class="btn btn-primary">
+</form>
+{% endblock %}
