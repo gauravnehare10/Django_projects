@@ -1,0 +1,21 @@
+{% extends "app1/base.html" %}
+{% block content %}
+    <table class="table table-primary table-striped-columns">
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Fees</th>
+        </tr>
+        {% for stud in students %}
+        <tr>
+            <td>{{stud.rollno}}</td>
+            <td>{{stud.name}}</td>
+            <td>{{stud.course}}</td>
+            <td>{{stud.fees}}</td>
+        </tr>    
+        {% empty %}
+        No Student with this course
+        {% endfor %}
+    </table>
+{% endblock %}

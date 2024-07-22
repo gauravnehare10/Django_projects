@@ -1,0 +1,11 @@
+<html>
+    <body>
+       <form action="{% url "emp_update" %}" method="POST">
+        {% csrf_token %}
+        Dept No <input type="text" name="deptno"><br>
+        Update Salary <input type="decimal" name="upd_sal">
+        <input type="submit" value="Submit">
+       </form>
+       {{msg}}
+    </body>
+</html>

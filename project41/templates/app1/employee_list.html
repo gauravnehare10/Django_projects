@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border='1'>
+        {% for row in emp %}
+        <tr>
+            <td>{{row.empno}}</td>
+            <td>{{row.ename}}</td>
+            <td>{{row.salary}}</td>
+            <td>{{row.deptno.deptno}}</td>
+            <td>{{row.deptno.dname}}</td>
+            <td>{{row.deptno.loc}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
