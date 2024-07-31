@@ -19,6 +19,7 @@
         <th>Subject2</th>
         <th>Subject3</th>
     </tr>
+    {% if stud %}
     <tr>
         <td>{{stud.rollno}}</td>
         <td>{{stud.name}}</td>
@@ -26,6 +27,7 @@
         <td>{{stud.subject2}}</td>
         <td>{{stud.subject3}}</td>
     </tr>
+    {% endif %}
     {% for student in obj %}
     <tr>
         <td>{{student.rollno}}</td>
