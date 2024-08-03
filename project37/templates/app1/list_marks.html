@@ -19,7 +19,7 @@
         <td>{{stud.subject1}}</td>
         <td>{{stud.subject2}}</td>
         <td>{{stud.subject3}}</td>
-        <td><a class="btn btn-primary" href="{% url "edit" stud.id %}">Edit</a></td>
+        <td><a class="btn btn-primary" href="{% url "edit" stud.id %}">Edit</a>&nbsp;<a class="btn btn-primary" href="{% url "delete" stud.id %}">Delete</a></td>
     </tr>
     {% endfor %}
 </table>

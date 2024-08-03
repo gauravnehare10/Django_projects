@@ -38,6 +38,11 @@ def edit_view(request, id):
             return redirect('update')
         else:
             return render(request,'app1/update_stud.html', context={'form':form})
+        
+def delete_view(request, id):
+    stud = Marks.objects.get(id=id)
+    x = stud.delete()
+    return redirect('update')
 
 def search_view(request):
     obj = Marks.objects.all()

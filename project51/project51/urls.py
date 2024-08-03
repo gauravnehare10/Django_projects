@@ -1,5 +1,5 @@
 """
-URL configuration for project37 project.
+URL configuration for project51 project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/5.0/topics/http/urls/
@@ -16,16 +16,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from app1.views import *
-
+from django.urls import include
+from app1.views import home
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', view_index, name = 'index'),
-    path('add/', add_view, name = 'add'),
-    path('update/', list_marks, name='update'),
-    path('edit/<id>', edit_view, name='edit'),
-    path('delete/<id>', delete_view, name='delete'),
-    path('search/', search_view, name='search'),
-    path('find/', find_view, name='find'),
-    path('find_result/', find_result, name='find_result'),
+    path('accounts/', include("django.contrib.auth.urls")),
+    path('', home, name='home'),
 ]
