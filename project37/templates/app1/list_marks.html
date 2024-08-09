@@ -6,9 +6,9 @@
     <tr>
         <th>Roll No</th>
         <th>Name</th>
-        <th>Subject1</th>
-        <th>Subject2</th>
-        <th>Subject3</th>
+        <th>Python</th>
+        <th>HTML</th>
+        <th>JavaScript</th>
         <th>Operation</th>
     </tr>
     </tr>
@@ -16,9 +16,9 @@
     <tr>
         <td>{{stud.rollno}}</td>
         <td>{{stud.name}}</td>
-        <td>{{stud.subject1}}</td>
-        <td>{{stud.subject2}}</td>
-        <td>{{stud.subject3}}</td>
+        <td>{{stud.python}}</td>
+        <td>{{stud.html}}</td>
+        <td>{{stud.javascript}}</td>
         <td><a class="btn btn-primary" href="{% url "edit" stud.id %}">Edit</a>&nbsp;<a class="btn btn-primary" href="{% url "delete" stud.id %}">Delete</a></td>
     </tr>
     {% endfor %}

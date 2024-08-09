@@ -15,26 +15,26 @@
     <tr>
         <th>Roll No</th>
         <th>Name</th>
-        <th>Subject1</th>
-        <th>Subject2</th>
-        <th>Subject3</th>
+        <th>Python</th>
+        <th>HTML</th>
+        <th>JavaScript</th>
     </tr>
     {% if stud %}
     <tr>
         <td>{{stud.rollno}}</td>
         <td>{{stud.name}}</td>
-        <td>{{stud.subject1}}</td>
-        <td>{{stud.subject2}}</td>
-        <td>{{stud.subject3}}</td>
+        <td>{{stud.python}}</td>
+        <td>{{stud.html}}</td>
+        <td>{{stud.javascript}}</td>
     </tr>
     {% endif %}
     {% for student in obj %}
     <tr>
         <td>{{student.rollno}}</td>
         <td>{{student.name}}</td>
-        <td>{{student.subject1}}</td>
-        <td>{{student.subject2}}</td>
-        <td>{{student.subject3}}</td>
+        <td>{{student.python}}</td>
+        <td>{{student.html}}</td>
+        <td>{{student.javascript}}</td>
     {% endfor %}
 </table>
 <h2>{{msg}}</h2>

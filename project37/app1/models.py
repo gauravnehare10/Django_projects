@@ -4,6 +4,6 @@ from django.db import models
 class Marks(models.Model):
     rollno = models.IntegerField()
     name = models.CharField(max_length=100)
-    subject1 = models.FloatField()
-    subject2 = models.FloatField()
-    subject3 = models.FloatField()
+    python = models.FloatField()
+    html = models.FloatField()
+    javascript = models.FloatField()
