@@ -1,0 +1,26 @@
+16 - Morning - Full, Night - Full
+17 - Morning - Full, Night - Dal Bhat
+18 - Morning - Full, Night - Dal Bhat
+19 - Morning - Full, Night - 2 chapati bhaji bhat
+20 - Morning - Full, Night - Full
+21 - Morning - Full, Night - Full
+22 - Morning - Full, Night - NO - (Biryani Baher)
+23 - Morning - Full, Night - Bhaji Chapati
+24 - Morning - Full, Night - Bhaji Chapati
+25 - Morning - Full, Night - Bhaji Chapati
+26 - Morning - Full, Night - Bhaji Chapati
+27 - Morning - Full, Night - Bhaji Chapati
+28 - Morning - Full, Night - Bhaji Chapati
+29 - Morning - Full, Night - 2 Chapati Bhat Bhaji
+30 - Morning - Full, Night - Bhaji Chapati
+31 - Morning - Bhat Bhaji , Night - Bhaji Chapati
+
+#########################################################
+
+Full - 18 - 1260 Rs
+Dal Bhat - 3 - 150 Rs
+Bhaji Chapati - 8 - 400 Rs
+2 chapati bhaji bhat - 2 - 120 Rs
+Total - 31 - 1930 Rs
+
+#########################################################
